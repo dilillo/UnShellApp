@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 67 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.33333,0,0,1.33333,0,0)">
+        <path d="M-0,44.5L48.541,44.5C46.245,44.431 44.376,42.65 44.169,40.391L44.169,4.527C44.169,2.027 42.14,-0.002 39.64,-0.002L-0,-0.002L-0,44.5Z" style="fill:rgb(9,55,98);"/>
+        <g transform="matrix(1,0,0,1,10.0845,10.2225)">
+            <g id="Menu">
+                <g>
+                    <g id="Path_16145" transform="matrix(1,0,0,1,2,3.111)">
+                        <path d="M1.111,0L18.889,0C19.498,-0 20,0.502 20,1.111C20,1.72 19.498,2.222 18.889,2.222L1.111,2.222C0.502,2.222 0,1.72 0,1.111C-0,0.502 0.502,0 1.111,0" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="Path_16146" transform="matrix(1,0,0,1,2,3.111)">
+                        <path d="M1.111,7.778L18.889,7.778C19.498,7.778 20,8.28 20,8.889C20,9.498 19.498,10 18.889,10L1.111,10C0.502,10 0,9.498 0,8.889C0,8.28 0.502,7.778 1.111,7.778" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                    <g id="Path_16147" transform="matrix(1,0,0,1,2,3.111)">
+                        <path d="M1.111,15.556L18.889,15.556C19.498,15.556 20,16.058 20,16.667C20,17.276 19.498,17.778 18.889,17.778L1.111,17.778C0.502,17.778 0,17.276 0,16.667C0,16.058 0.502,15.556 1.111,15.556" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

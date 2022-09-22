@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UnShellApp"
+    x:DataType="local:AddProductSerialNumberSearchPageViewModel"
+    x:Class="UnShellApp.AddProductSerialNumberSearchPage"
+    Title="AddProductSerialNumberSearchPage">
+    <Grid
+        RowDefinitions="Auto, *">
+        <Grid
+            Margin="10"
+            ColumnDefinitions="*, Auto">
+            <Label
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Add Product - Search SN" />
+            <Button
+                Grid.Column="1"
+                VerticalOptions="Center"
+                Margin="0"
+                Padding="0"
+                BorderWidth="0"
+                Background="Transparent"
+                ImageSource="closedark.png"
+                Command="{Binding CloseCommand}" />
+        </Grid>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Spacing="10"
+            Padding="10,0">
+            <Label
+                Text="Search"
+                FontSize="32" />
+            <ActivityIndicator
+                IsRunning="True" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

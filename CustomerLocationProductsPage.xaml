@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UnShellApp"
+    x:DataType="local:CustomerLocationProductsPageViewModel"
+    x:Class="UnShellApp.CustomerLocationProductsPage"
+    Title="Customer Locations Products">
+    <Grid
+        RowDefinitions="Auto, *">
+        <Grid
+            Margin="10"
+            ColumnDefinitions="*, Auto">
+            <Label
+                VerticalOptions="Center"
+                Text="Customer Location Products" />
+            <Button
+                Grid.Column="1"
+                VerticalOptions="Center"
+                Margin="0"
+                Padding="0"
+                BorderWidth="0"
+                Background="Transparent"
+                ImageSource="closedark.png"
+                Command="{Binding CloseCommand}" />
+        </Grid>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Spacing="10"
+            Padding="10,0">
+            <Label
+                Text="{Binding CustomerName}"
+                FontSize="32" />
+            <Label
+                Text="{Binding CustomerLocationName}"
+                FontSize="32" />
+            <CollectionView
+                ItemsSource="{Binding CustomerLocationProducts}"
+                SelectionMode="Single">
+                <CollectionView.EmptyViewTemplate>
+                    <DataTemplate>
+                        <Label
+                            Text="Loading ..." />
+                    </DataTemplate>
+                </CollectionView.EmptyViewTemplate>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate
+                        x:DataType="local:PartnerLocationProductModel">
+                        <Label
+                            Padding="20"
+                            Text="{Binding Name}" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button
+                Text="Add Product"
+                Command="{Binding AddProductCommand}"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

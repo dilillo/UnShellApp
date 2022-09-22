@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UnShellApp"
+    x:DataType="local:CustomerLocationsPageViewModel"
+    x:Class="UnShellApp.CustomerLocationsPage"
+    Title="CustomerLocationsPage">
+    <FlyoutPage.Flyout>
+        <local:FlyoutMenuPage />
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <ContentPage>
+            <Grid
+                RowDefinitions="Auto, *">
+                <HorizontalStackLayout>
+                    <Button
+                        Margin="0"
+                        Padding="0"
+                        BorderWidth="0"
+                        Background="Transparent"
+                        ImageSource="menu.png"
+                        Pressed="Button_Pressed" />
+                    <Label
+                        VerticalOptions="Center"
+                        Text="Customer Locations" />
+                </HorizontalStackLayout>
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    Spacing="10"
+                    Padding="10,0">
+                    <Label
+                        Text="{Binding CustomerName}"
+                        FontSize="32" />
+                    <CollectionView
+                        ItemsSource="{Binding CustomerLocations}"
+                        SelectionChangedCommand="{Binding GoToCustomerLocationProductsPageCommand}"
+                        SelectionChangedCommandParameter="{Binding Source={RelativeSource Mode=Self}, Path=SelectedItem}"
+                        SelectionMode="Single">
+                        <CollectionView.EmptyViewTemplate>
+                            <DataTemplate>
+                                <Label
+                                    Text="Loading ..." />
+                            </DataTemplate>
+                        </CollectionView.EmptyViewTemplate>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate
+                                x:DataType="local:PartnerLocationModel">
+                                <Label
+                                    Padding="20"
+                                    Text="{Binding Name}" />
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Grid>
+        </ContentPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

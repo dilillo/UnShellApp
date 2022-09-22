@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Class="UnShellApp.AddProductCancelPopup"
+    Color="White"
+    Size="300,350"
+    CanBeDismissedByTappingOutsideOfPopup="False">
+    <Grid
+        Padding="20"
+        Margin="20"
+        RowDefinitions="Auto, Auto, Auto, *">
+        <Label
+            FontAttributes="Bold"
+            LineBreakMode="WordWrap"
+            Text="Cancel Product Setup" />
+        <Label
+            Grid.Row="1"
+            Margin="0,20,0,0"
+            Text="Any changes you have made to the product will be lost" />
+        <Label
+            Grid.Row="2"
+            Margin="0,20,0,0"
+            Text="Are you sure you want to cancel?" />
+        <Grid
+            Grid.Row="3"
+            Margin="0,20,0,0"
+            VerticalOptions="EndAndExpand"
+            ColumnDefinitions="*, Auto">
+            <Label
+                LineBreakMode="WordWrap"
+                TextDecorations="Underline"
+                TextColor="Blue"
+                VerticalOptions="CenterAndExpand"
+                Text="No, Do Not Cancel">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="No_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Button
+                Grid.Column="1"
+                Margin="10,0,0,4"
+                Text="Yes, Cancel"
+                Clicked="Yes_Tapped"/>
+        </Grid>
+    </Grid>
+</toolkit:Popup>

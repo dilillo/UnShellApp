@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UnShellApp"
+    x:DataType="local:AddProductConfirmPageViewModel"
+    x:Class="UnShellApp.AddProductConfirmPage"
+    Title="AddProductConfirmPage">
+    <Grid
+        RowDefinitions="Auto, *">
+        <Grid
+            Margin="10"
+            ColumnDefinitions="Auto, *, Auto">
+            <Button
+                VerticalOptions="Center"
+                Margin="0"
+                Padding="0"
+                BorderWidth="0"
+                Background="Transparent"
+                ImageSource="caret_left.png"
+                Command="{Binding BackCommand}" />
+            <Label
+                Grid.Column="1"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center"
+                Text="Add Product - Confirm" />
+            <Button
+                Grid.Column="2"
+                VerticalOptions="Center"
+                Margin="0"
+                Padding="0"
+                BorderWidth="0"
+                Background="Transparent"
+                ImageSource="closedark.png"
+                Command="{Binding CloseCommand}" />
+        </Grid>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Spacing="10"
+            Padding="10,0">
+            <Label
+                Text="Confirm"
+                FontSize="32" />
+            <Label
+                Text="{Binding ProductName}"
+                FontSize="32" />
+            <Button
+                Text="Confirm"
+                Command="{Binding ConfirmCommand}" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
