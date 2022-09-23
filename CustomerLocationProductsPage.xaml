@@ -34,6 +34,9 @@
             <Label
                 Text="{Binding CustomerLocationName}"
                 FontSize="32" />
+            <Button
+                Text="Add Product"
+                Command="{Binding AddProductCommand}"/>
             <CollectionView
                 ItemsSource="{Binding CustomerLocationProducts}"
                 SelectionMode="Single">
@@ -52,9 +55,6 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            <Button
-                Text="Add Product"
-                Command="{Binding AddProductCommand}"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

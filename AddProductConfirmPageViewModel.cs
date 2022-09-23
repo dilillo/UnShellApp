@@ -25,7 +25,7 @@ namespace UnShellApp
         [RelayCommand]
         void Load()
         {
-            ProductName = _addProductContext.PrimaryProduct.Name;
+            ProductName = (_addProductContext.PrimaryProduct ?? _addProductContext.SecondaryProduct).Name;
         }
 
         [RelayCommand]
