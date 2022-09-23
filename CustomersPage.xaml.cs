@@ -1,5 +1,3 @@
-using AndroidX.Lifecycle;
-
 namespace UnShellApp;
 
 public partial class CustomersPage : FlyoutPage
