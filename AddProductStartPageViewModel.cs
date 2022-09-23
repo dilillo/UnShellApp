@@ -2,7 +2,7 @@
 
 namespace UnShellApp
 {
-    public partial class AddProductStartPageViewModel : BasePageViewModel
+    public partial class AddProductStartPageViewModel : BasePageViewModel, INeedAddProductCancelPopupService
     {
         readonly ICommonServices _commonServices;
         readonly IPageNavigator _pageNavigator;

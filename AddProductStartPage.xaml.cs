@@ -6,8 +6,6 @@ public partial class AddProductStartPage : ContentPage
 	{
 		InitializeComponent();
 
-		viewModel.CancelPopupService = new AddProductCancelPopupService(this);
-
         BindingContext = viewModel;
     }
 }

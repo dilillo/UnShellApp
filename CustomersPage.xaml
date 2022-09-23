@@ -6,6 +6,9 @@
     x:DataType="local:CustomersPageViewModel"
     x:Class="UnShellApp.CustomersPage"
     Title="CustomersPage">
+    <FlyoutPage.Behaviors>
+        <local:LoadViewModelBehavior />
+    </FlyoutPage.Behaviors>
     <FlyoutPage.Flyout>
         <local:FlyoutMenuPage />
     </FlyoutPage.Flyout>

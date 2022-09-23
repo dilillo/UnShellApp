@@ -6,6 +6,9 @@
     x:DataType="local:AddProductStartPageViewModel"
     x:Class="UnShellApp.AddProductStartPage"
     Title="AddProductStartPage">
+    <ContentPage.Behaviors>
+        <local:NeedAddCancelPopupServiceBehavior />
+    </ContentPage.Behaviors>
     <Grid
         RowDefinitions="Auto, *">
         <Grid

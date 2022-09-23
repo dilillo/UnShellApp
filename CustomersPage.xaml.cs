@@ -9,13 +9,6 @@ public partial class CustomersPage : FlyoutPage
 		BindingContext = viewModel;
     }
 
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-        ((CustomersPageViewModel)BindingContext).LoadCommand.Execute(null);
-    }
-
     private void Button_Pressed(object sender, EventArgs e)
     {
         IsPresented = true;

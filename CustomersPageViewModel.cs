@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace UnShellApp
 {
-    public partial class CustomersPageViewModel : BasePageViewModel
+    public partial class CustomersPageViewModel : BasePageViewModel, INeedToBeLoadedAsync
     {
         readonly ICommonServices _commonServices;
         readonly IPageNavigator _pageNavigator;

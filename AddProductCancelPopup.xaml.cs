@@ -45,3 +45,35 @@ public class AddProductCancelPopupService : IAddProductCancelPopupService
         action();
     }
 }
+
+public interface INeedAddProductCancelPopupService
+{
+    IAddProductCancelPopupService CancelPopupService { get; set; }
+}
+
+public class NeedAddCancelPopupServiceBehavior : Behavior<ContentPage>
+{
+    protected override void OnAttachedTo(ContentPage target)
+    {
+        target.BindingContextChanged += Target_BindingContextChanged;
+
+        base.OnAttachedTo(target);
+    }
+
+    protected override void OnDetachingFrom(ContentPage target)
+    {
+        target.BindingContextChanged -= Target_BindingContextChanged;
+
+        base.OnDetachingFrom(target);
+    }
+
+    private void Target_BindingContextChanged(object sender, EventArgs e)
+    {
+        var target = sender as ContentPage;
+
+        if (target?.BindingContext is INeedAddProductCancelPopupService viewModel)
+        {
+            viewModel.CancelPopupService = new AddProductCancelPopupService(target);
+        }
+    }
+}
